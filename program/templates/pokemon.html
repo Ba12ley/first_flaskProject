@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div>
+    <form class="ui-form" method="POST" action="/pokemon">
+        <label for="pokecolour">Pick Colour</label>
+        <input type="text" class="form-control" id="pokecolour" name="pokecolour" placeholder="E.g. Red">
+        <button type="submit">Send</button>
+
+    </form>
+    <div>
+
+    </div>
+</div>
+{% endblock %}
