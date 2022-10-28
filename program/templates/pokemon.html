@@ -8,8 +8,25 @@
         <button type="submit">Send</button>
 
     </form>
-    <div>
+</div>
 
-    </div>
+<div>
+    {% if pokemon_returned %}
+    <table>
+        <thead>
+            <tr>
+                <th>Pokemon</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in pokemon_returned %}
+            <tr>
+                <td>{{ i }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
 </div>
 {% endblock %}

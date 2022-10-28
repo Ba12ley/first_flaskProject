@@ -56,6 +56,6 @@ def get_poke_color(color):
     pprint(data)
     for pokename in data['pokemon_species']:
         pokemon_returned.append(pokename['name'])
-    for name in pokemon_returned:
-        print(name)
+    # for name in pokemon_returned:
+    #     print(name)
     return pokemon_returned
