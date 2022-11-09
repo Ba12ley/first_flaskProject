@@ -1,10 +1,10 @@
 from pprint import pprint
 
 import requests
-
 from program import app
 from flask import render_template, request
 from datetime import datetime
+
 
 # time_now = str(datetime.today())
 title = 'title'
@@ -49,9 +49,10 @@ def get_chuck_joke():
     return data['value']
 
 
+
 def get_poke_color(color):
     pokemon_returned = []
-    r = requests.get(f'https://pokeapi.co/api/v2/pokemon-color/{color}')
+    r = requests.get(f'https://pokeapi.co/api/v2/pokemon-color/{color.lower()}')
     data = r.json()
     pprint(data)
     for pokename in data['pokemon_species']:
